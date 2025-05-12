@@ -59,14 +59,14 @@ To build the image with Docker, clone this repository and run the following
 command inside the repository directory:
 
 ```bash
-# (Replace "rocker-tidyverse-blimp" with a tag of your choice if you want)
-docker build --tag rocker-tidyverse-blimp:latest -f Dockerfile .
+# (Replace "tidyverse-blimp-docker" with a tag of your choice if you want)
+docker build --tag tidyverse-blimp-docker:latest -f Dockerfile .
 ```
 
 To use a specific version of `rocker/tidyverse`, you can use `--build-arg`:
 
 ```bash
-docker build --build-arg ROCKER_BASE=rocker/tidyverse:4.5 --tag rocker-tidyverse-blimp:4.5 -f Dockerfile .
+docker build --build-arg ROCKER_BASE=rocker/tidyverse:4.5 --tag tidyverse-blimp-docker:4.5 -f Dockerfile .
 ```
 ### Apptainer/Singularity
 
@@ -86,7 +86,7 @@ apptainer build --build-arg ROCKER_BASE=rocker/tidyverse:4.5 "$(basename $PWD).s
 
 ## Extending the container
 
-To extend this container, edit `Dockerfile` or `Singularity` as necessary or use `maouw/rocker-tidyverse-blimp` as the base image for a new container.
+To extend this container, edit `Dockerfile` or `Singularity` as necessary or use `maouw/tidyverse-blimp-docker` as the base image for a new container.
 
 ### Adding Ubuntu packages
 
